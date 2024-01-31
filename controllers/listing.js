@@ -9,7 +9,9 @@ module.exports.home = async (req, res) => {
 
 module.exports.index = async (req, res) => {
   const allListings = await Listing.find({});
-  res.render("./listings/index.ejs", { allListings });
+  res.render("./listings/index.ejs", {
+    allListings,
+  });
 };
 
 module.exports.renderNewForm = (req, res) => {

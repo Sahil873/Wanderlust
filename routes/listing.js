@@ -12,7 +12,7 @@ const upload = multer({ storage });
 router.get("/", wrapAsync(listingController.home));
 
 // new route
-router.get("/new", isLoggedIn, listingController.renderNewForm);
+router.get("/listings/new", isLoggedIn, listingController.renderNewForm);
 
 router
   .route("/listings")
